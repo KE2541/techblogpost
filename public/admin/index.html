@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self';">
+  <title>Admin Panel - TechBlog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <div id="loginOverlay" class="login-overlay">
+    <div class="login-card">
+      <div class="login-header">
+        <i class="fas fa-brain"></i>
+        <h1>TechBlog Admin</h1>
+        <p>Enter your credentials to continue</p>
+      </div>
+      <form id="loginForm" onsubmit="handleLogin(event)" autocomplete="off">
+        <div class="login-field">
+          <i class="fas fa-user"></i>
+          <input type="text" id="loginUser" placeholder="Username" required autocomplete="off">
+        </div>
+        <div class="login-field">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="loginPass" placeholder="Password" required autocomplete="off">
+        </div>
+        <div id="loginError" class="login-error"></div>
+        <button type="submit" id="loginBtn" class="btn btn-primary login-btn">
+          <i class="fas fa-shield-alt"></i> Sign In
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="admin-layout" id="adminLayout" style="display:none;">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="/" class="logo"><i class="fas fa-brain"></i> TechBlog</a>
+        <span class="badge">Admin</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="active" onclick="showSection('dashboard')"><i class="fas fa-chart-line"></i> Dashboard</a>
+        <a href="#" onclick="showSection('posts')"><i class="fas fa-newspaper"></i> Posts</a>
+        <a href="#" onclick="showSection('editor')"><i class="fas fa-pen-fancy"></i> New Post</a>
+        <a href="#" onclick="showSection('analytics')"><i class="fas fa-analytics"></i> Analytics</a>
+        <a href="#" onclick="showSection('monetization')"><i class="fas fa-dollar-sign"></i> Monetization</a>
+        <a href="../index.php" target="_blank"><i class="fas fa-external-link-alt"></i> View Site</a>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="logout-btn" onclick="handleLogout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-header">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <button class="menu-toggle" onclick="toggleAdminSidebar()" style="display:none;background:none;border:none;color:var(--text-primary);font-size:22px;cursor:pointer;"><i class="fas fa-bars"></i></button>
+          <h1 id="pageTitle">Dashboard</h1>
+        </div>
+        <div class="admin-actions">
+          <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </header>
+
+      <div class="admin-content" id="adminContent">
+      </div>
+    </main>
+  </div>
+
+  <div id="toastContainer"></div>
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleAdminSidebar()"></div>
+
+  <script src="../js/api.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+  <script src="js/admin.js"></script>
+  <script>
+    (function() {
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        return false;
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) || (e.ctrlKey && e.shiftKey && (e.key === 'C' || e.key === 'c')) || (e.ctrlKey && e.shiftKey && (e.key === 'J' || e.key === 'j')) || (e.ctrlKey && e.key === 'U' && e.key === 'u')) {
+          e.preventDefault();
+          return false;
+        }
+      });
+      setInterval(function() {
+        if (window.outerHeight - window.innerHeight > 200 || window.outerWidth - window.innerWidth > 200) {
+          document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0a0a1a;color:#e8e8f0;flex-direction:column;gap:16px;padding:20px;text-align:center;"><i class="fas fa-shield-halved" style="font-size:64px;color:#6c5ce7;"></i><h1>Console Closed</h1><p style="color:#a0a0c0;">Developer tools detected. Please close them to continue.</p></div>';
+        }
+      }, 1000);
+    })();
+  </script>
+</body>
+</html>

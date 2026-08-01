@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechBlog - Exploring the Future of Technology with AI, ML, Cloud Computing, and breakthrough innovations.">
+  <meta name="keywords" content="technology, AI, machine learning, cloud computing, deep learning, LLM, ICT">
+  <meta name="author" content="TechBlog">
+  <meta property="og:title" content="TechBlog - Technology Trends Shaping the Digital Future">
+  <meta property="og:description" content="Stay ahead with the latest in AI, Machine Learning, Cloud Computing, and breakthrough technologies shaping tomorrow.">
+  <meta property="og:type" content="website">
+  <title>TechBlog - Exploring the Future of Technology</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#" class="logo" onclick="navigate('home');return false;"><i class="fas fa-brain"></i> TechBlog</a>
+        <div class="nav-links" id="navLinks">
+          <a href="#" onclick="navigate('home');return false;" class="active">Home</a>
+          <div class="nav-dropdown">
+            <a href="#" class="dropdown-toggle" onclick="return false;">Categories <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+              <a href="#" onclick="filterByCategory('AI');return false;">AI</a>
+              <a href="#" onclick="filterByCategory('ML');return false;">ML</a>
+              <a href="#" onclick="filterByCategory('LLM');return false;">LLM</a>
+              <a href="#" onclick="filterByCategory('Cloud');return false;">Cloud</a>
+              <a href="#" onclick="filterByCategory('Deep Learning');return false;">Deep Learning</a>
+              <a href="#" onclick="filterByCategory('ICT');return false;">ICT</a>
+            </div>
+          </div>
+          <a href="#" onclick="renderAbout(document.getElementById('pageContent'));return false;">About</a>
+        </div>
+        <div class="nav-actions">
+          <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+    <div class="ad-slot ad-header" id="adHeader"></div>
+  </header>
+
+  <div class="container">
+    <div class="main-layout">
+      <div class="main-content-area">
+        <div class="main-content" id="pageContent">
+          <div class="loading"><i class="fas fa-spinner spinner"></i><p>Loading...</p></div>
+        </div>
+      </div>
+      <aside class="sidebar-content">
+        <div class="sidebar-ad ad-slot" id="adSidebar"><div class="ad-placeholder small">Advertisement</div></div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4><i class="fas fa-brain"></i> TechBlog</h4>
+          <p>Exploring the latest trends in AI, Machine Learning, Cloud Computing, and breakthrough technologies shaping the digital future.</p>
+          <div class="social-links">
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4><i class="fas fa-folder"></i> Categories</h4>
+          <ul>
+            <li><a href="#" onclick="filterByCategory('AI');return false;">Artificial Intelligence</a></li>
+            <li><a href="#" onclick="filterByCategory('ML');return false;">Machine Learning</a></li>
+            <li><a href="#" onclick="filterByCategory('LLM');return false;">Large Language Models</a></li>
+            <li><a href="#" onclick="filterByCategory('Cloud');return false;">Cloud Computing</a></li>
+            <li><a href="#" onclick="filterByCategory('Deep Learning');return false;">Deep Learning</a></li>
+            <li><a href="#" onclick="filterByCategory('ICT');return false;">ICT</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4><i class="fas fa-envelope"></i> Stay Connected</h4>
+          <p>Subscribe to our newsletter for the latest technology insights and blog updates.</p>
+          <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 TechBlog. All rights reserved.</span>
+        <span>Made with <i class="fas fa-heart" style="color:var(--danger);"></i> for tech enthusiasts</span>
+      </div>
+    </div>
+    <div class="ad-slot" id="adFooter"></div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" title="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="/public/js/api.js"></script>
+  <script src="/public/js/main.js"></script>
+</body>
+</html>

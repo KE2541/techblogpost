@@ -1,0 +1,18 @@
+DirectoryIndex index.php index.html
+
+Options -Indexes
+
+<IfModule mod_headers.c>
+  <Files "api.php">
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+  </Files>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+<FilesMatch "^(config\.php|\.htaccess)$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>

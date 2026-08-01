@@ -1,0 +1,18 @@
+DirectoryIndex index.php index.html
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteRule ^api\.php$ public/api.php [L,QSA]
+  RewriteRule ^admin/(.*)$ public/admin/$1 [L,QSA]
+  RewriteRule ^(css|js|uploads)/(.*)$ public/$1/$2 [L,QSA]
+  RewriteRule ^(setup|test)\.php$ public/$1.php [L,QSA]
+</IfModule>
+
+<FilesMatch "^(config\.php|\.htaccess|database\.sql|seed\.php)$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
