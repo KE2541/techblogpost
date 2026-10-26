@@ -1,76 +1,104 @@
-# 🇰🇪 Online Voting Kenya
+# 💻 TechBlog Kenya
 
-**A Web-Based Online Voting Project**
+**A Technology Blogging Platform**
 
-Welcome to **Online Voting Kenya**, a web-based project focused on making digital voting more accessible and convenient. The project explores how technology can support the voting process through an online platform.
+Welcome to **TechBlog Kenya**, a web-based project focused on technology content, knowledge sharing, and digital learning.
 
-## 🌐 Live Application
+🌐 **Live Website:** [https://techblog-ke254.freedev.app/](https://techblog-ke254.freedev.app/?i=1)
 
-**[Launch Online Voting Kenya](https://onlinevoting-ke.freedev.app/?i=1)**
+## 📖 About the Project
 
-## 📌 Project Overview
+TechBlog Kenya is a web development project designed around the idea of sharing technology-related information, insights, and learning resources through an online platform.
 
-Online Voting Kenya is a technology project exploring the use of web-based systems for digital voting. It aims to provide an accessible online interface for voting-related activities and demonstrates the potential of digital solutions to support election processes.
-
-The project is part of my continued interest in IT systems, application development, digital transformation, and practical technology solutions.
+The project reflects my interest in application development, digital communication, and building practical web-based solutions that make information easier to access and share.
 
 ## 🎯 Project Objectives
 
-- Explore the application of web technology to voting processes.
-- Provide an accessible interface for online voting activities.
-- Investigate how digital systems can support efficient election workflows.
-- Encourage continued learning in application development and system design.
-- Explore the importance of usability, data integrity, privacy, and security in digital voting.
+- Create an online platform for technology-related content.
+- Encourage knowledge sharing and continuous learning.
+- Explore web application design and development.
+- Provide a foundation for publishing and organizing technical information.
+- Support the discovery of useful technology concepts, tutorials, and insights.
 
-## ✨ Areas of Focus
+## ✨ Potential Features
 
-- **Accessibility:** Making voting-related interfaces available through a web browser.
-- **Usability:** Supporting a straightforward user experience.
-- **Digital Transformation:** Exploring alternatives to traditional, paper-based workflows.
-- **Data Integrity:** Recognizing the importance of accurate vote recording and result handling.
-- **Security Awareness:** Understanding the importance of authentication, access controls, and protecting voter information.
+The following are possible areas of functionality and development, subject to the application's actual implementation:
 
-*The items above describe the project's objectives and areas of focus; they should not be interpreted as verification that every capability has been implemented.*
+- **Technology Articles:** Content covering IT, software, cloud computing, and digital innovation.
+- **Content Organization:** Categories or topics to help readers navigate information.
+- **Reader Experience:** Clear presentation of articles and technology resources.
+- **Responsive Design:** An interface suitable for desktop and mobile browsing.
+- **Future Enhancements:** Opportunities to introduce search, user accounts, article publishing, and reader engagement.
 
-## 🛠️ Technology
+## 🛠️ Technology Stack
 
-The application is hosted online and can be accessed through the live link above.
+The application's underlying source code and technology stack have not yet been verified.
 
-The underlying programming languages, frameworks, database, and deployment configuration have not been independently verified. These details can be added once the source code and implementation stack are confirmed.
+The following details can be added after confirming the implementation:
 
-## 🔐 Security and Responsible Use
+- Frontend framework or technologies
+- Backend framework or runtime
+- Database and data storage
+- Hosting and deployment configuration
+- Development tools and dependencies
 
-Online voting systems require careful attention to voter authentication, ballot confidentiality, vote integrity, prevention of duplicate voting, auditability, and protection of personal data.
+## 🚀 Getting Started
 
-This project should be evaluated and tested before being used for real elections. Deployment on a public URL alone does not establish that a voting system is secure or suitable for official elections.
+### Explore the Live Application
 
-Please avoid entering real voter credentials or sensitive personal information unless the platform's security and data-handling practices have been verified.
+Visit the deployed website:
 
-## 🚀 Future Development
+**[Open TechBlog Kenya](https://techblog-ke254.freedev.app/?i=1)**
 
-Potential areas for further development include:
+### Run Locally
 
-- Improving interface responsiveness and accessibility.
-- Strengthening authentication and role-based access controls.
-- Implementing appropriate safeguards against duplicate voting.
-- Improving vote validation, result accuracy, and audit logging.
-- Documenting privacy and data protection practices.
-- Adding automated testing and deployment documentation.
+To provide accurate local installation instructions, the source code and project dependencies must first be available.
 
-These are potential improvements and do not necessarily represent existing application features.
+Once the repository is configured, this section can include:
+
+1. Prerequisites and required software.
+2. Instructions for cloning the repository.
+3. Dependency installation.
+4. Environment variable configuration.
+5. Database setup, if applicable.
+6. Commands for running and testing the application locally.
+
+## 🔒 Security and Best Practices
+
+As the project develops, important considerations include:
+
+- Validating and sanitizing user input.
+- Protecting authentication credentials and sensitive configuration.
+- Applying appropriate access controls to content-management functions.
+- Protecting user information and stored content.
+- Keeping dependencies updated and documenting known limitations.
+
+These are recommended development practices, not claims that specific security controls are already implemented.
+
+## 🔮 Future Development
+
+Potential improvements include:
+
+- Enhanced article discovery and categorization.
+- Search functionality for technology content.
+- Improved accessibility and mobile usability.
+- Article creation and management workflows, where appropriate.
+- Reader engagement features.
+- Automated testing and improved technical documentation.
 
 ## 👨‍💻 Developer
 
 **GitHub:** [@KE2541](https://github.com/KE2541)
 
-**Live Project:** [Online Voting Kenya](https://onlinevoting-ke.freedev.app/?i=1)
+**Live Project:** [TechBlog Kenya](https://techblog-ke254.freedev.app/?i=1)
 
-My interests include IT support, systems administration, cloud infrastructure, Python programming, data science, and developing practical digital solutions.
+My interests include IT support, Microsoft 365 administration, cloud infrastructure, Python programming, data science, and practical application development.
 
 ## 📄 License
 
-A license has not yet been specified. Before reusing, modifying, or distributing this project, confirm the applicable licensing terms.
+No license has been specified for this project yet. Please add a suitable `LICENSE` file before authorizing reuse, modification, or redistribution of the source code.
 
 ---
 
-*Exploring technology. Building practical solutions. Learning through implementation.*
+*Sharing knowledge. Exploring technology. Building practical solutions.*
+
